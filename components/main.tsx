@@ -20,8 +20,8 @@ export default function Main() {
           </section>
         </section>
         <section className="relative flex mt-5 max-w-screen-sm m-auto">
-        <Button as={Link} className="" color="primary" href="#" variant="bordered">
-            <p className="text-black font-bold">Continue without account</p>
+        <Button as={Link} className="" color="primary" href="#" variant="shadow">
+            <p className="text-white font-bold">Continue without account</p>
         </Button>
         {/* <Button as={Link} className="m-5" color="primary" href="#" variant="bordered">
             <p className="text-black font-bold">Sign Up</p>

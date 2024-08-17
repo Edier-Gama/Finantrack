@@ -5,34 +5,26 @@ import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@nextui-org/navbar
 import {Link} from '@nextui-org/link'
 import {Button} from '@nextui-org/button'
 
-export default function NavbarPage() {
-    const menuItems = [
-        "Perfil",
-        "Mi Tablero",
-        "Analíticas",
-        "Ajustes",
-        "Cerrar Sesión",
-      ];
-    
+export default function NavbarPage() {    
       return (
         <Navbar isBlurred={false} isBordered={true}>
       <NavbarBrand>
-        <p className="font-bold text-inherit">ACME</p>
+        <p className="font-bold text-inherit">Finantracks</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link color="foreground" href="#">
-            Features
+            Home
           </Link>
         </NavbarItem>
-        <NavbarItem isActive>
-          <Link aria-current="page" href="#">
-            Customers
+        <NavbarItem>
+          <Link aria-current="page" color="foreground" href="#">
+            About
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#">
-            Integrations
+            Functionalities
           </Link>
         </NavbarItem>
       </NavbarContent>
