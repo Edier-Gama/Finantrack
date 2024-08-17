@@ -5,7 +5,7 @@ import { Link } from "@nextui-org/link";
 
 export default function Main() {
   return (
-    <main className="flex flex-col justify-start max-w-8xl">
+    <main className="flex flex-col justify-start max-w-8xl animate-fade-in-up">
         <section className="relative flex flex-col mt-52 m-auto">
           <h2 className="text-black text-6xl font-semibold tracking-tighter text-center max-md:text-5xl m-2">
             <b>

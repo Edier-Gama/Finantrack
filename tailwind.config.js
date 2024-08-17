@@ -1,4 +1,6 @@
 import {nextui} from '@nextui-org/theme'
+import animations from '@midudev/tailwind-animations'
+
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -7,5 +9,5 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
-  plugins: [nextui()],
+  plugins: [nextui(), animations],
 }
