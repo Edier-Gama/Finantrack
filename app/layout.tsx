@@ -1,5 +1,7 @@
 import "../styles/globals.css";
 import "@fontsource-variable/montserrat";
+// Supports weights 100-900
+import "@fontsource-variable/inter";
 import { Metadata } from "next";
 import React from "react";
 

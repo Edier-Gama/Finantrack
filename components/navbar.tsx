@@ -1,83 +1,52 @@
 /* eslint-disable prettier/prettier */
 
 import React from "react";
-import {Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from "@nextui-org/navbar";
-import {Button} from '@nextui-org/button'
+import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@nextui-org/navbar";
 import {Link} from '@nextui-org/link'
+import {Button} from '@nextui-org/button'
 
 export default function NavbarPage() {
     const menuItems = [
         "Perfil",
-        "Dashboard",
-        "Analytics",
+        "Mi Tablero",
+        "Analíticas",
         "Ajustes",
-        "Help & Feedback",
-        "Log Out",
+        "Cerrar Sesión",
       ];
     
       return (
-        <Navbar>
-          <NavbarContent className="sm:hidden" justify="start">
-            <NavbarMenuToggle />
-          </NavbarContent>
-    
-          <NavbarContent className="sm:hidden pr-3" justify="center">
-            <NavbarBrand>
-¡              <h2 className="font-bold text-inherit">FinanTrack</h2>
-            </NavbarBrand>
-          </NavbarContent>
-    
-          <NavbarContent className="hidden sm:flex gap-4" justify="center">
-            <NavbarBrand>
-              <h2 className="font-bold text-inherit">FinanTrack</h2>
-            </NavbarBrand>
-            <section className="ml-16 flex m-3">
-            <NavbarItem className="m-3">
-              <Link color="foreground" href="#">
-                Inicio
-              </Link>
-            </NavbarItem>
-            <NavbarItem className="m-3">
-              <Link color="foreground" href="#">
-                Sobre Nosotros
-              </Link>
-            </NavbarItem>
-            <NavbarItem className="m-3">
-              <Link color="foreground" href="#">
-                Funcionalidades
-              </Link>
-            </NavbarItem>
-            </section>
-          </NavbarContent>
-    
-          <NavbarContent justify="end">
-            <NavbarItem className="hidden lg:flex">
-              <Link color="foreground" href="#">Iniciar sesión</Link>
-            </NavbarItem>
-            <NavbarItem>
-              <Button as={Link} color="warning" href="#" variant="flat">
-                Registrarte
-              </Button>
-            </NavbarItem>
-          </NavbarContent>
-    
-          <NavbarMenu>
-            {menuItems.map((item, index) => (
-              <NavbarMenuItem key={`${item}-${index}`}>
-                <Link
-                  className="w-full"
-                  color={
-                    index === 2 ? "warning" : index === menuItems.length - 1 ? "foreground" : "foreground"
-                  }
-                  href="#"
-                  size="lg"
-                >
-                  {item}
-                </Link>
-              </NavbarMenuItem>
-            ))}
-          </NavbarMenu>
-        </Navbar>
+        <Navbar isBlurred={false} isBordered={true}>
+      <NavbarBrand>
+        <p className="font-bold text-inherit">ACME</p>
+      </NavbarBrand>
+      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Features
+          </Link>
+        </NavbarItem>
+        <NavbarItem isActive>
+          <Link aria-current="page" href="#">
+            Customers
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+            Integrations
+          </Link>
+        </NavbarItem>
+      </NavbarContent>
+      <NavbarContent justify="end">
+        <NavbarItem className="hidden lg:flex">
+          <Link href="#">Login</Link>
+        </NavbarItem>
+        <NavbarItem>
+          <Button as={Link} color="primary" href="#" variant="flat">
+            Sign Up
+          </Button>
+        </NavbarItem>
+      </NavbarContent>
+    </Navbar>
       );
 }
 

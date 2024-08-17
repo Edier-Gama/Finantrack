@@ -2,9 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
+body {
+    font-family: 'Montserrat Variable', sans-serif;
+}
+
+h2 {
+    font-family: 'Inter Variable', sans-serif;
+}
+
 :root {
     background-color: white;
 }
-body {
-    font-family: 'Montserrat Variable', sans-serif;
-  }
