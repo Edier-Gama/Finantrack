@@ -21,7 +21,7 @@ export default function Main() {
           </section>
         </section>
         <section className="relative flex mt-5 max-w-screen-sm m-auto">
-          <Suspense fallback={<div />}>
+          <Suspense fallback={<div>Loadin...</div>}>
              <AuthButtonServer/>
           </Suspense>
         </section>

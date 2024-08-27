@@ -8,11 +8,11 @@ import { Button } from "@nextui-org/button";
 import { SignInWithGoogle } from "../utils/supabase/sign-in-with.google";
 
 
-export default function AuthButtonClient({ session }: any) {
+export default function AuthButtonClient({ user }: any) {
   
   return (
     <section>
-      {(session != null) && (
+      {(user != null) && (
         <Button 
         className="" 
         color="primary" 
@@ -22,7 +22,7 @@ export default function AuthButtonClient({ session }: any) {
         <p className="text-white font-bold">Go to my dashboard</p>
         </Button>
       )}
-      {(session == null) && (
+      {(user == null) && (
         <Button 
         className="" 
         color="primary" 

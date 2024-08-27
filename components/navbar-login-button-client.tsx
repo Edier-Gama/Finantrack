@@ -7,18 +7,19 @@ import { Link } from "@nextui-org/link";
 import { NavbarItem } from "@nextui-org/navbar";
 import {Avatar} from "@nextui-org/avatar"
 
-
 import { SignInWithGoogle } from "../utils/supabase/sign-in-with.google";
 
-export default function NavbarLoginButtonClient({ session }: any) {
-  const avatar = session.user_metadata.avatar_url
+export default function NavbarLoginButtonClient({ user }: any) {
 
   return (
     <section>
-      {(session != null) && (
-              <Avatar isBordered className="cursor-pointer" color="default" src={avatar}/>
+      {(user != undefined
+      ) && (
+        <section>
+          <Avatar isBordered className="cursor-pointer" color="default" src={user?.user_metadata.avatar_url}/>
+        </section>
       )}
-        {(session === null) && (
+        {(user === undefined) && (
           <NavbarItem className="hidden lg:flex">
               <Link href="#" onClick={() => SignInWithGoogle()}>Login</Link>
           </NavbarItem>
