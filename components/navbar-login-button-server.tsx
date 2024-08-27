@@ -7,5 +7,9 @@ export default async function NavbarLoginButtonServer() {
     
   const session = await getUserSession()
   
-  return <NavbarLoginButtonClient session={session} />;
+  return (
+    <section>
+        <NavbarLoginButtonClient session={session} />
+    </section>
+  )
 }

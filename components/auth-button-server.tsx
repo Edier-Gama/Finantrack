@@ -7,5 +7,9 @@ export default async function AuthButtonServer() {
     
   const session = await getUserSession()
   
-  return <AuthButtonClient session={session} />;
+  return ( 
+    <section>
+     <AuthButtonClient session={session} />
+    </section>
+  )
 }
