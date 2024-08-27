@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React from "react";
+import React, { Suspense } from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@nextui-org/navbar";
 import {Link} from '@nextui-org/link'
 
@@ -30,7 +30,9 @@ export default  function NavbarPage() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarLoginButtonServer/>
+        <Suspense fallback={<div/>}>
+           <NavbarLoginButtonServer/>
+        </Suspense>
       </NavbarContent>
     </Navbar>
       );
