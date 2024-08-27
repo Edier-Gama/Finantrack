@@ -1,11 +1,12 @@
 /* eslint-disable prettier/prettier */
-
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@nextui-org/navbar";
 import {Link} from '@nextui-org/link'
-import {Button} from '@nextui-org/button'
 
-export default function NavbarPage() {    
+import NavbarLoginButtonServer from "./navbar-login-button-server";
+
+export default  function NavbarPage() { 
+   
       return (
         <Navbar isBlurred={false} isBordered={true}>
       <NavbarBrand>
@@ -29,14 +30,7 @@ export default function NavbarPage() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
-          </Button>
-        </NavbarItem>
+        <NavbarLoginButtonServer/>
       </NavbarContent>
     </Navbar>
       );
