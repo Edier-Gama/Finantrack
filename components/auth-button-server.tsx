@@ -20,5 +20,7 @@ export default function AuthButtonServer() {
   
   if(user !== undefined){
     return <AuthButtonClient user={user} />
+  }else{
+    return <AuthButtonClient user={null} />
   }
 }

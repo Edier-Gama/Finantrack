@@ -17,7 +17,7 @@ export default function NavbarLoginButtonClient({ user }: any) {
       {(user 
       ) && (
         <section>
-          <Avatar isBordered className="cursor-pointer" color="default" src={user?.user_metadata.avatar_url}/>
+          <Avatar isBordered className="cursor-pointer" color="default" src={user.user_metadata.avatar_url}/>
         </section>
       )}
         {(!user) && (

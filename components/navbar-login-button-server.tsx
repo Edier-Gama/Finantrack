@@ -19,5 +19,7 @@ export default function NavbarLoginButtonServer() {
   }, [])
   if(user !== undefined){
       return <NavbarLoginButtonClient user={user} />
+  }else{
+    return <NavbarLoginButtonClient user={null} />
   }
 }
