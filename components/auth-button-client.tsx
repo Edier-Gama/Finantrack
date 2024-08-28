@@ -12,7 +12,7 @@ export default function AuthButtonClient({ user }: any) {
   
   return (
     <section>
-      {(user != null) && (
+      {(user) && (
         <Button 
         className="" 
         color="primary" 
@@ -22,7 +22,7 @@ export default function AuthButtonClient({ user }: any) {
         <p className="text-white font-bold">Go to my dashboard</p>
         </Button>
       )}
-      {(user == null) && (
+      {(!user) && (
         <Button 
         className="" 
         color="primary" 

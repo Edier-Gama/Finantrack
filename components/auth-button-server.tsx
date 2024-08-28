@@ -19,10 +19,6 @@ export default function AuthButtonServer() {
   }, [])
   
   if(user !== undefined){
-    return ( 
-      <section>
-       <AuthButtonClient user={user} />
-      </section>
-    )
+    return <AuthButtonClient user={user} />
   }
 }

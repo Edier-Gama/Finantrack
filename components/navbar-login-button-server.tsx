@@ -18,10 +18,6 @@ export default function NavbarLoginButtonServer() {
     getSession().then((result) => setUser(result))
   }, [])
   if(user !== undefined){
-      return (
-        <section>
-            <NavbarLoginButtonClient user={user} />
-        </section>
-      )
+      return <NavbarLoginButtonClient user={user} />
   }
 }

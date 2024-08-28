@@ -10,16 +10,17 @@ import {Avatar} from "@nextui-org/avatar"
 import { SignInWithGoogle } from "../utils/supabase/sign-in-with.google";
 
 export default function NavbarLoginButtonClient({ user }: any) {
-
+  console.log(user);
+  
   return (
     <section>
-      {(user != undefined
+      {(user 
       ) && (
         <section>
           <Avatar isBordered className="cursor-pointer" color="default" src={user?.user_metadata.avatar_url}/>
         </section>
       )}
-        {(user === undefined) && (
+        {(!user) && (
           <NavbarItem className="hidden lg:flex">
               <Link href="#" onClick={() => SignInWithGoogle()}>Login</Link>
           </NavbarItem>
