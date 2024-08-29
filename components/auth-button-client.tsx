@@ -10,10 +10,16 @@ import { SignInWithGoogle } from "../utils/supabase/sign-in-with.google";
 
 
 export default function AuthButtonClient({ user }: any) {
+  const sessionLocal = JSON.parse(user.value)
+
+  const session = sessionLocal.props.user
+
+  console.log(session);
+  
   
   return (
     <section>
-      {(user) && (
+      {session !== null && (
         <Button 
         className="" 
         color="primary" 
@@ -23,7 +29,7 @@ export default function AuthButtonClient({ user }: any) {
         <p className="text-white font-bold">Go to my dashboard</p>
         </Button>
       )}
-      {(!user) && (
+      {session === null && (
         <Suspense fallback={<div>Loading...</div>}>
            <Button 
            className="" 
