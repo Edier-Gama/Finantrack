@@ -9,7 +9,7 @@ import { Suspense } from "react";
 import { SignInWithGoogle } from "../utils/supabase/sign-in-with.google";
 
 
-export default function AuthButtonClient({ user }: any) {
+export default function AuthButtonClient({ user }) {
   const session = user
 
   return (

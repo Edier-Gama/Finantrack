@@ -1,9 +1,7 @@
 /* eslint-disable prettier/prettier */
+import AuthButtonServer from "./auth-button-server.jsx";
 
-'use server'
-import AuthButtonServer from "./auth-button-server";
-
-export default async function Main() {
+export default function Main() {
 
   return (
     <main className="flex flex-col justify-start max-w-8xl animate-fade-in-up">
@@ -22,7 +20,7 @@ export default async function Main() {
           </section>
         </section>
         <section className="relative flex mt-5 max-w-screen-sm m-auto">
-             <AuthButtonServer/>
+            <AuthButtonServer/>
         </section>
     </main>
   );

@@ -7,7 +7,7 @@ import { NavbarItem } from "@nextui-org/navbar";
 
 import { SignInWithGoogle } from "../utils/supabase/sign-in-with.google";
 
-export default function NavbarLoginButtonClient({ user }: any) {
+export default function NavbarLoginButtonClient({ user }) {
   const session = user
 
   return (
