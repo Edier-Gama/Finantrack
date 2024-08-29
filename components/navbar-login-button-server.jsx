@@ -8,5 +8,7 @@ import NavbarLoginButtonClient from "./navbar-login-button-client";
 export default async function NavbarLoginButtonServer() {
   const user = await getUserSession()
 
+{/* @ts-expect-error Server Component */}
+
   return <NavbarLoginButtonClient user={user} />
 }

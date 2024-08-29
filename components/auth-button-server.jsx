@@ -7,5 +7,7 @@ import AuthButtonClient from "./auth-button-client";
 export default async function AuthButtonServer() {
   const user = await getUserSession()
 
+{/* @ts-expect-error Server Component */}
+
   return <AuthButtonClient user={user} />
 }
