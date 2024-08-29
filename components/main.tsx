@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import AuthButtonServer from "./auth-button-server.jsx";
+import AuthButtonServer from "./auth-button-server";
 
 export default function Main() {
 
