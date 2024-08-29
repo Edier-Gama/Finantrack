@@ -1,9 +1,9 @@
 /* eslint-disable prettier/prettier */
 
-
+'use server'
 import AuthButtonServer from "./auth-button-server";
 
-export default function Main() {
+export default async function Main() {
 
   return (
     <main className="flex flex-col justify-start max-w-8xl animate-fade-in-up">

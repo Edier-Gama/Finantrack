@@ -1,4 +1,5 @@
 /* eslint-disable prettier/prettier */
+"use server"
 import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@nextui-org/navbar";
 import {Link} from '@nextui-org/link'
@@ -7,7 +8,7 @@ import {Link} from '@nextui-org/link'
 import NavbarLoginButtonServer from "./navbar-login-button-server";
 
 
-export default function NavbarPage() { 
+export default async function NavbarPage() { 
       return (
         <Navbar isBlurred={false} isBordered={true}>
       <NavbarBrand>

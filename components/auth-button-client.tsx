@@ -11,9 +11,7 @@ import { SignInWithGoogle } from "../utils/supabase/sign-in-with.google";
 
 export default function AuthButtonClient({ user }: any) {
   const session = user
-  
-  console.log(user);
-  
+
   return (
     <section>
       {session !== null && (

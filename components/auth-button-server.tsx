@@ -7,9 +7,5 @@ import AuthButtonClient from "./auth-button-client";
 export default async function AuthButtonServer() {
   const user = await getUserSession()
 
-  return (
-    <section>
-      <AuthButtonClient user={user} />
-    </section>
-  );
+  return <AuthButtonClient user={user} />
 }
