@@ -8,12 +8,7 @@ import { NavbarItem } from "@nextui-org/navbar";
 import { SignInWithGoogle } from "../utils/supabase/sign-in-with.google";
 
 export default function NavbarLoginButtonClient({ user }: any) {
-  const sessionLocal = JSON.parse(user.value)
-
-  const session = sessionLocal.props.user
-  
-  // const sessionInfo = JSON.parse(user.value)
-  // const avatar = sessionInfo.props.user.user_metadata.picture
+  const session = user
 
   return (
       <section>

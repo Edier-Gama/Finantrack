@@ -1,20 +1,9 @@
 /* eslint-disable prettier/prettier */
 
-import { getUserSession } from "../utils/supabase/get-user-session";
 
 import AuthButtonServer from "./auth-button-server";
-export async function getServerSideProps() {
-  const user = await getUserSession();
-
-  return {
-    props: {
-      user,
-    },
-  };
-}
 
 export default function Main() {
-  const user = getServerSideProps()
 
   return (
     <main className="flex flex-col justify-start max-w-8xl animate-fade-in-up">
@@ -33,7 +22,7 @@ export default function Main() {
           </section>
         </section>
         <section className="relative flex mt-5 max-w-screen-sm m-auto">
-             <AuthButtonServer user={user}/>
+             <AuthButtonServer/>
         </section>
     </main>
   );
