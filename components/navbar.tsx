@@ -10,11 +10,7 @@ import NavbarLoginButtonServer from "./navbar-login-button-server";
 export async function getServerSideProps() {
   const user = await getUserSession();
 
-  return {
-    props: {
-      user,
-    },
-  };
+  return {props: user}
 }
 
 export default function NavbarPage() { 
