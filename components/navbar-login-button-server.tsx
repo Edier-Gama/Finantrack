@@ -3,6 +3,6 @@
 
 import NavbarLoginButtonClient from "./navbar-login-button-client";
 
-export default async function NavbarLoginButtonServer({user}) {
+export default function NavbarLoginButtonServer({user}) {
   return <NavbarLoginButtonClient user={user} />
 }
