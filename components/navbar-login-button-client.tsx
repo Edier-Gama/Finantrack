@@ -10,21 +10,21 @@ import {Avatar} from "@nextui-org/avatar"
 import { SignInWithGoogle } from "../utils/supabase/sign-in-with.google";
 
 export default function NavbarLoginButtonClient({ user }: any) {
-  const avatar = user.user_metadata.picture
+  const sessionInfo = JSON.parse(user.value)
+  const avatar = sessionInfo.props.user.user_metadata.picture
 
   return (
       <section>
-        {(user 
-        ) && (
+        {(user !== undefined) && (
           <section>
             <Avatar isBordered className="cursor-pointer" color="default" src={avatar}/>
           </section>
         )}
-          {(!user) && (
-            <NavbarItem className="hidden lg:flex">
-                <Link href="#" onClick={() => SignInWithGoogle()}>Login</Link>
-            </NavbarItem>
-          )}
+        {(!user) && (
+          <NavbarItem className="hidden lg:flex">
+            <Link href="#" onClick={() => SignInWithGoogle()}>Login</Link>
+          </NavbarItem>
+        )}
       </section>
     );
 }

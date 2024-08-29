@@ -3,10 +3,23 @@ import React from "react";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem} from "@nextui-org/navbar";
 import {Link} from '@nextui-org/link'
 
+import { getUserSession } from "../utils/supabase/get-user-session";
+
 import NavbarLoginButtonServer from "./navbar-login-button-server";
 
-export default  function NavbarPage() { 
-   
+export async function getServerSideProps() {
+  const user = await getUserSession();
+
+  return {
+    props: {
+      user,
+    },
+  };
+}
+
+export default function NavbarPage() { 
+   const user = getServerSideProps()
+
       return (
         <Navbar isBlurred={false} isBordered={true}>
       <NavbarBrand>
@@ -30,7 +43,7 @@ export default  function NavbarPage() {
         </NavbarItem>
       </NavbarContent>
       <NavbarContent justify="end">
-           <NavbarLoginButtonServer/>
+           <NavbarLoginButtonServer user={user}/>
       </NavbarContent>
     </Navbar>
       );
