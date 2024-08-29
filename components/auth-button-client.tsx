@@ -4,6 +4,7 @@
 "use client";
 
 import { Button } from "@nextui-org/button";
+import { Suspense } from "react";
 
 import { SignInWithGoogle } from "../utils/supabase/sign-in-with.google";
 
@@ -23,16 +24,18 @@ export default function AuthButtonClient({ user }: any) {
         </Button>
       )}
       {(!user) && (
-        <Button 
-        className="" 
-        color="primary" 
-        href="#" 
-        variant="shadow"
-        onClick={async () => await SignInWithGoogle()}
-        >
-        <p className="text-white font-bold">Continue with Google</p>
-        <img alt="" className="rounded-full"height={30} src="../google-logo.jpg" width={30}/>
-        </Button>
+        <Suspense fallback={<div>Loading...</div>}>
+           <Button 
+           className="" 
+           color="primary" 
+           href="#" 
+           variant="shadow"
+           onClick={async () => await SignInWithGoogle()}
+           >
+           <p className="text-white font-bold">Continue with Google</p>
+           <img alt="" className="rounded-full"height={30} src="../google-logo.jpg" width={30}/>
+           </Button>
+        </Suspense>
       )}
     </section>
   );
