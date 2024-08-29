@@ -1,7 +1,7 @@
 /* eslint-disable prettier/prettier */
 
-import { createClient } from "./client"
 
+import { createClient } from "./client"
 
 const SignInWithGoogle = async () => {
   const supabase = createClient();
@@ -9,12 +9,18 @@ const SignInWithGoogle = async () => {
   supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: "https://finantracks.vercel.app/auth/callback",
+      redirectTo: "http://localhost:3000/auth/callback",
     },
   });
 };
+const SignOutSession = async () => {
 
-export { SignInWithGoogle };
+  const supabase = createClient();
+
+  await supabase.auth.signOut()
+};
+
+export { SignInWithGoogle , SignOutSession};
 
 
 

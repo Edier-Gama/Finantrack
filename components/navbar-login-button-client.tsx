@@ -4,21 +4,26 @@
 "use client"
 import { Link } from "@nextui-org/link";
 import { NavbarItem } from "@nextui-org/navbar";
-import {Avatar} from "@nextui-org/avatar"
 
 import { SignInWithGoogle } from "../utils/supabase/sign-in-with.google";
 
+import AvatarComponent from "./avatar";
+
+
 export default function NavbarLoginButtonClient({ user }: any) {
-  const session = user
+  console.log(user);
   
   return (
       <section>
-        {(session !== null) && (
+        {(user !== null) && (
           <section>
-            <Avatar isBordered src={session.user.user_metadata.picture} />
+            <AvatarComponent 
+               avatar={user.user.user_metadata.picture} 
+               username={user.user.user_metadata.full_name} 
+            />
           </section>
         )}
-        {(session === null) && (
+        {(user === null) && (
           <section>
             <NavbarItem className="lg:flex">
               <Link href="#" onClick={() => SignInWithGoogle()}>Login</Link>

@@ -5,8 +5,6 @@ import {Link} from '@nextui-org/link'
 
 
 import NavbarLoginButtonServer from "./navbar-login-button-server";
-
-
 export default function NavbarPage() { 
       return (
         <Navbar isBlurred={false} isBordered={true}>
