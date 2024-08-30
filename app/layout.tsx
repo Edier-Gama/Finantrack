@@ -6,6 +6,7 @@ import { Metadata } from "next";
 import React from "react";
 
 import { siteConfig } from "../config/site";
+import NavbarPage from "../components/navbar";
 
 import { Providers } from "./providers";
 
@@ -31,7 +32,10 @@ export default function RootLayout({
       <body>
         <Providers>
           <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]" />
-          <div>{children}</div>
+          <div>
+            <NavbarPage />
+            {children}
+          </div>
         </Providers>
       </body>
     </html>

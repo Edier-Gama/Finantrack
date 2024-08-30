@@ -22,7 +22,7 @@ export default function AuthButtonClient({ user }: any) {
         href="/dashboard" 
         variant="shadow"
         >
-        <p className="text-white font-bold">Go to my dashboard</p>
+        <a className="text-white font-bold" href='/dashboard'>Go to my dashboard</a>
         </Button>
       )}
       {session === null && (
