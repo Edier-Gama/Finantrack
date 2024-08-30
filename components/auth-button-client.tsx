@@ -5,6 +5,7 @@
 
 import { Button } from "@nextui-org/button";
 import { Suspense } from "react";
+import { googleLogo } from "public/google";
 
 import { SignInWithGoogle } from "../utils/supabase/sign-in-with.google";
 
@@ -34,7 +35,9 @@ export default function AuthButtonClient({ user }: any) {
            onClick={async () => await SignInWithGoogle()}
            >
            <p className="text-white font-bold">Continue with Google</p>
-           <img alt="" className="rounded-full"height={30} src="../google-logo.jpg" width={30}/>
+           <section className="bg-white . p-0.5 rounded-full">
+           {googleLogo}
+           </section>
            </Button>
         </Suspense>
       )}
