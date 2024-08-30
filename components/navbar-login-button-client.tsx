@@ -25,8 +25,8 @@ export default function NavbarLoginButtonClient({ user }: any) {
         )}
         {(user === null) && (
           <section>
-            <NavbarItem className="lg:flex">
-              <Link href="#" onClick={() => SignInWithGoogle()}>Login</Link>
+            <NavbarItem className="lg:flex text-white">
+              <Link className="text-white" href="#" onClick={() => SignInWithGoogle()}>Login</Link>
             </NavbarItem>
           </section>
         )}

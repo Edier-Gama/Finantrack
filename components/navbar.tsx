@@ -18,6 +18,9 @@ export default function NavbarPage() {
           <Link className="ml-10" color="foreground" href="#">
             Dashboard
           </Link>
+          <Link className="ml-10" color="foreground" href="#">
+            Contact
+          </Link>
         </NavbarItem>
       </NavbarContent>
       </NavbarBrand>

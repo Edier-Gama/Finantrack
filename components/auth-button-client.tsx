@@ -17,24 +17,22 @@ export default function AuthButtonClient({ user }: any) {
     <section>
       {session !== null && (
         <Button 
-        className="" 
-        color="primary" 
+        className="bg-white" 
         href="/dashboard" 
         variant="shadow"
         >
-        <a className="text-white font-bold" href='/dashboard'>Go to my dashboard</a>
+        <a className="text-black bg-white font-bold" href='/dashboard'>Go to my dashboard</a>
         </Button>
       )}
       {session === null && (
         <Suspense fallback={<div>Loading...</div>}>
            <Button 
-           className="" 
-           color="primary" 
+           className="bg-white h-12" 
            href="#" 
            variant="shadow"
            onClick={async () => await SignInWithGoogle()}
            >
-           <p className="text-white font-bold">Continue with Google</p>
+           <p className="text-black font-bold">Continue with Google</p>
            <section className="bg-white . p-0.5 rounded-full">
            {googleLogo}
            </section>
