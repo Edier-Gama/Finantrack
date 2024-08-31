@@ -1,5 +1,10 @@
 /* eslint-disable prettier/prettier */
-export default function DashboardPage() {
-  
-  return <h2>This is the dashboard</h2>;
+import { DashboardServer } from "./dashboard-server"
+
+function DashboardPageClient(){
+  return <DashboardServer/>
 }
+export default function DashboardPage() {
+  return <DashboardPageClient/>
+}
+
