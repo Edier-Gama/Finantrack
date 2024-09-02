@@ -6,6 +6,7 @@
 import { Button } from "@nextui-org/button";
 import { Suspense } from "react";
 import { googleLogo } from "public/google";
+import { Link } from "@nextui-org/link";
 
 import { SignInWithGoogle } from "../utils/supabase/sign-in-with.google";
 
@@ -21,7 +22,7 @@ export default function AuthButtonClient({ user }: any) {
         href="/dashboard" 
         variant="shadow"
         >
-        <a className="text-black bg-white font-bold" href='/dashboard'>Go to my dashboard</a>
+        <Link className="text-black bg-white font-bold" href='/dashboard'>Go to my dashboard</Link>
         </Button>
       )}
       {session === null && (

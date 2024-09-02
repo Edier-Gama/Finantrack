@@ -11,15 +11,14 @@ import AvatarComponent from "./avatar";
 
 
 export default function NavbarLoginButtonClient({ user }: any) {
-  console.log(user);
   
   return (
       <section>
         {(user !== null) && (
           <section>
             <AvatarComponent 
-               avatar={user.user.user_metadata.picture} 
-               username={user.user.user_metadata.full_name} 
+               avatar={user.user_metadata.avatar_url} 
+               username={user.user_metadata.full_name} 
             />
           </section>
         )}

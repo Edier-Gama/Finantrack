@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "FinanTracks",
+  name: "Finantracks",
   description:
     "Maneja tus finanzas responsablemente con nuestra herramienta de seguimiento",
   navItems: [

@@ -8,7 +8,7 @@ export default function FooterSection() {
         <section className="flex flex-col m-2">
            <p className="font-bold text-black m-3">Finantracks</p>
            <p className="text-black ml-3">Made with love by 
-              <a href="https://linkedin.com/in/ediergama"> Edier Gama</a>
+              <a className="text-opacity-30" href="https://linkedin.com/in/ediergama"> Edier Gama</a>
            </p>     
         </section>
         <section className="flex m-7 mt-10">

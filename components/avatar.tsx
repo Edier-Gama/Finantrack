@@ -10,6 +10,7 @@ import {
 import { Avatar } from "@nextui-org/avatar";
 import { SignOutSession } from "utils/supabase/sign-in-with.google";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function AvatarComponent({avatar, username}: any) {
   const router = useRouter()
@@ -18,6 +19,10 @@ export default function AvatarComponent({avatar, username}: any) {
     router.refresh()
   }
 
+  const onChangeRoute = (route: string) => {
+    router.push(route)
+  }
+  
   return (
     <div className="flex items-center gap-4">
       <Dropdown placement="bottom-end">
@@ -34,10 +39,15 @@ export default function AvatarComponent({avatar, username}: any) {
             <p className="font-semibold">Welcome back</p>
             <p className="font-semibold">{username}</p>
           </DropdownItem>
-          <DropdownItem key="team_settings">Dashboard</DropdownItem>
-          <DropdownItem key="analytics">About</DropdownItem>
-          <DropdownItem key="configurations">Configurations</DropdownItem>
-          <DropdownItem key="help_and_feedback">Help & Feedback</DropdownItem>
+          <DropdownItem key="profile" onClick={() => onChangeRoute('/profile')}>
+            Profile
+          </DropdownItem>
+          <DropdownItem key="dashboard" onClick={() => onChangeRoute('/dashboard')}>
+            Dashboard
+          </DropdownItem>
+          <DropdownItem key="configurations">
+            <Link color="foreground" href="/dashboard">Settings</Link>
+          </DropdownItem>
           <DropdownItem key="logout" color="danger" onClick={() => signOut()}>
             Log Out
           </DropdownItem>

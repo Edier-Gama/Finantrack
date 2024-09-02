@@ -5,7 +5,7 @@ import createSupabaseServerClient from "./server";
 
 export async function getUserSession() {
   const supabase = await createSupabaseServerClient();
-  const { data } = await supabase.auth.getSession();
+  const { data } = await supabase.auth.getUser();
   
-  return data.session;
+  return data.user;
 }
