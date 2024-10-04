@@ -9,7 +9,7 @@ const SignInWithGoogle = async () => {
   supabase.auth.signInWithOAuth({
     provider: "google",
     options: {
-      redirectTo: "https://myautocv.vercel.app/auth/callback",
+      redirectTo: "https://finantracks.vercel.app/auth/callback",
     },
   });
 };
